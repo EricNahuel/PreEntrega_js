@@ -1,48 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./estilos.css">
+    <title>eric-preentrega</title>
+</head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled">Disabled</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
-        </div>
-      </nav>
+    <section>
+        <h1>Calculadora de Alquiler de habitaciones</h1>
+
+        <form>
+          <label for="cantidadhabitacionInput">Cantidad de habitaciones:</label>
+          <input type="number" id="cantidadhabitacionInput" min="2" required>
+      
+          <label for="diasInput">Duración del alquiler (días):</label>
+          <input type="number" id="diasInput" min="1" required>
+      
+          <label for="serviciosMantenimientoInput">Servicios de mantenimiento y limpieza:</label>
+          <select id="serviciosMantenimientoInput" required>
+            <option value="">Seleccionar</option>
+            <option value="si">Sí</option>
+            <option value="no">No</option>
+          </select>
+      
+          <label for="pagosInput">Pago en efectivo:</label>
+          <select id="pagosInput" required>
+            <option value="">Seleccionar</option>
+            <option value="si">Sí</option>
+            <option value="no">No</option>
+          </select>
+      
+          <label for="tarjetaCuotasInput">Cuotas para el pago con tarjeta:</label>
+          <input type="number" id="tarjetaCuotasInput" min="1" max="6">
+      
+          <button id="calcularButton">Calcular</button>
+        </form>
+      
+        <div id="resultado"></div>
+    </section>
+    
+
+
+
+  <script src="./main.js"></script>
 </body>
-<script src="./main.js"></script>
-<script src="//cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </html>
+    
